@@ -6,9 +6,10 @@ import { useUserData } from '../lib/hooks';
 
 
 function MyApp({ Component, pageProps }) {
+  const userData = useUserData();
 
   return(
-    <UserContext.Provider value={useUserData}>
+    <UserContext.Provider value={userData}>
       <Navbar/>
       <Component {...pageProps} />
       <Toaster />
