@@ -4,7 +4,7 @@ import { UserContext } from "../lib/context";
 
 export default function Navbar() {
     
-    const {user, username} = useContext;
+    const {user, username} = useContext(UserContext);
 
     return (
         <nav className="navbar">
@@ -14,10 +14,9 @@ export default function Navbar() {
                         <button className="btn-logo">Feed</button>
                     </Link>
                 </li>
-
                 {username && (
                     <>
-                        <li>
+                        <li className="push-left">
                             <Link href="/admin">
                                 <button className="btn-blue">Write Posts</button>
                             </Link>
