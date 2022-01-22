@@ -1,5 +1,3 @@
-import toast from 'react-hot-toast'
-
 import Loader from '../components/Loader'
 import { firestore, postToJSON, fromMillis } from '../lib/firebase'
 import PostFeed from '../components/PostFeed'
