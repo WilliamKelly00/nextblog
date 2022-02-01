@@ -1,11 +1,9 @@
-import toast from 'react-hot-toast'
-
 import Loader from '../components/Loader'
 import { firestore, postToJSON, fromMillis } from '../lib/firebase'
 import PostFeed from '../components/PostFeed'
 import { useState } from 'react'
 
-const LIMIT = 1;
+const LIMIT = 5;
 
 export async function getServerSideProps(context) {
   const postQuery = firestore
